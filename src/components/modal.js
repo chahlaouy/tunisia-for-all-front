@@ -3,6 +3,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { addMember } from "../actions/memberAction";
 import Dropdown from "../components/dropdown";
+import history from "../history";
 
 import axios from 'axios'
 
@@ -56,7 +57,7 @@ class  Modal extends React.Component {
         this.setState({ member: memberDetails }, () => {
         console.log(this.state)
         });
-        console.log(childData)
+        console.log(childData) 
         this.setState()
     }
     onChangeHandler = (event) => {
@@ -65,6 +66,9 @@ class  Modal extends React.Component {
           selectedFile: event.target.files[0],
           loaded: 0,
         })
+    }
+    closeModal = () => {
+       this.props.parentCallback('')
     }
     handleChangeFor = (propertyName) => (event) => {
     const { member } = this.state;
@@ -401,8 +405,8 @@ class  Modal extends React.Component {
                                         />
                                 </div>  
                                 <div className="flex items-center py-8">
-                                <button onClick={this.cancelCourse} type="reset" className="bg-red-400 px-6 py-3 rounded text-white mr-8">
-                                    Effacer
+                                <button onClick={this.closeModal} type="reset" className="bg-red-400 px-6 py-3 rounded text-white mr-8">
+                                    Fermer
                                 </button>
                                 <button type="submit" className="bg-indigo-600 px-6 py-3 rounded text-white">
                                     Ajouter

@@ -10,24 +10,7 @@ class Dropdown extends React.Component {
     
     // this.handleChangeFor = this.handleChangeFor.bind(this);
   }
-  
-
-  // handleChangeFor = (propertyName) => (event) => {
-  //   const { countries } = this.state;
-  //   // this.props.delegation;
    
-    
-  //   // console.log('this.props.delegation',this.props.gouvernerat)
-  //   const memberDetails = {
-  //     ...countries,
-      
-  //     [propertyName]: event.target.value,
-      
-  //   };
-  //   this.setState({ countries: memberDetails });
-  // };
-
-  
   // countries heya gouvernorat o states houma les déligation
 
   componentDidMount() {
@@ -36,18 +19,50 @@ class Dropdown extends React.Component {
         {
           name: "Tunis",
           code: "11",
-          states: 
-		  [
-            {name: "Carthage", code: '12', secteur:
-			[ {name: "SidiBousaid",code:'51'},{name: "Amilcar",code:'52'},{name: "Carthage Byrsa",code:'53'},{name: "Carthage Plage",code:'54'},{name: "Le Jasmin",code:'55'},{name: "Cité Mohamed Ali",code:'56'}],}, {name: "La Medina", code: '13'},{name: "Bab El Bhar", code: '14'},{name: "Bab Souika", code: '0013'},{name: "El Omrane", code: '17'},{name: "El Omrane Supérieur", code: '005'},{name: "Ettahrir", code: '13'},{name: "El Menzah", code: '13'},{name: "Cité El Khadhra"},{name: "Le Bardo"},{name: "Sijoumi"},{name: "Ezzouhour"},{name: "El Hrairia"},{name: "Sidi Hassine"},{name: "El Ouardia",},{name: "El Kabaria",},{name: "Sidi El Béchir"},{name: "Djebel Djelloud"},{name: "La Goulette"},{name: "Le Kram"},{name: "La Marsa"},
+          states: [
+            {
+              name: "Carthage",
+              code: "12",
+              secteur: [
+                { name: "SidiBousaid", code: "51" },
+                { name: "Amilcar", code: "52" },
+                { name: "Carthage Byrsa", code: "53" },
+                { name: "Carthage Plage", code: "54" },
+                { name: "Le Jasmin", code: "55" },
+                { name: "Cité Mohamed Ali", code: "56" },
+              ],
+            },
+            { name: "La Medina", code: "13" },
+            { name: "Bab El Bhar", code: "14" },
+            { name: "Bab Souika", code: "0013" },
+            { name: "El Omrane", code: "17" },
+            { name: "El Omrane Supérieur", code: "005" },
+            { name: "Ettahrir", code: "13" },
+            { name: "El Menzah", code: "13" },
+            { name: "Cité El Khadhra" },
+            { name: "Le Bardo" },
+            { name: "Sijoumi" },
+            { name: "Ezzouhour" },
+            { name: "El Hrairia" },
+            { name: "Sidi Hassine" },
+            { name: "El Ouardia" },
+            { name: "El Kabaria" },
+            { name: "Sidi El Béchir" },
+            { name: "Djebel Djelloud" },
+            { name: "La Goulette" },
+            { name: "Le Kram" },
+            { name: "La Marsa" },
           ],
-		  
         },
         {
           name: "Ariana",
           code: "12",
           states: [
-            {name: "Raoued", code: '12'},{name: "Kalaât El Andalous", code: '12'},{name: "Sidi Thabet", code: '12'},{name: "Cité Ettadhamen", code: '12'},{name: "El Mnihla", code: '12'},
+            { name: "Raoued", code: "12" },
+            { name: "Kalaât El Andalous", code: "12" },
+            { name: "Sidi Thabet", code: "12" },
+            { name: "Cité Ettadhamen", code: "12" },
+            { name: "El Mnihla", code: "12" },
           ],
         },
 
@@ -55,41 +70,43 @@ class Dropdown extends React.Component {
           name: "Ben Arous",
           code: "13",
           states: [
-            {name: "La Nouvelle Medina",},{name: "El Mourouj",},{
+            { name: "La Nouvelle Medina" },
+            { name: "El Mourouj" },
+            {
               name: "Hammam Lif",
-             code: '12'
+              code: "12",
             },
             {
               name: "Hammam Chôtt",
-              code: '12'
+              code: "12",
             },
             {
               name: "Bou Mhel El Bassatine",
-              code: '12'
+              code: "12",
             },
             {
               name: "Ezzahra",
-              code: '12'
+              code: "12",
             },
             {
               name: "Radès",
-              code: '12'
+              code: "12",
             },
             {
               name: "Megrine",
-              code: '12'
+              code: "12",
             },
             {
               name: "Mohamedia",
-              code: '12'
+              code: "12",
             },
             {
               name: "Fouchana",
-              code: '12'
+              code: "12",
             },
             {
               name: "Mornag",
-              code: '12'
+              code: "12",
             },
           ],
         },
@@ -125,7 +142,6 @@ class Dropdown extends React.Component {
               name: "El Battane",
               code: "256",
             },
-
           ],
         },
 
@@ -186,10 +202,12 @@ class Dropdown extends React.Component {
             {
               name: "Grombalia",
               code: "380",
-            },{
+            },
+            {
               name: "Grombalia",
               code: "380",
-            },{
+            },
+            {
               name: "Hammamet",
               code: "380",
             },
@@ -219,7 +237,7 @@ class Dropdown extends React.Component {
             {
               name: "En-Nadhour",
               code: "2563",
-            },           
+            },
           ],
         },
 
@@ -250,11 +268,11 @@ class Dropdown extends React.Component {
             {
               name: "Testour",
               code: "2563",
-            },  
+            },
             {
               name: "Goubellat",
               code: "2563",
-            },  
+            },
             {
               name: "Medjez El Bab",
               code: "2563",
@@ -288,11 +306,11 @@ class Dropdown extends React.Component {
             {
               name: "Ghardimaou",
               code: "56323",
-            },  
+            },
             {
               name: "Oued Meliz",
               code: "56323",
-            },  
+            },
             {
               name: "Balta ",
               code: "56323",
@@ -325,10 +343,10 @@ class Dropdown extends React.Component {
             },
             {
               name: "Kalâat Khasbah",
-            },  
+            },
             {
               name: "Djerissa",
-            },  
+            },
             {
               name: "El Ksour",
             },
@@ -362,17 +380,16 @@ class Dropdown extends React.Component {
             },
             {
               name: "Er-Rouhia",
-            },  
+            },
             {
               name: "Kesra",
-            },  
+            },
             {
               name: "Bargou",
             },
             {
               name: "El Aroussa",
             },
-            
           ],
         },
 
@@ -397,10 +414,10 @@ class Dropdown extends React.Component {
             },
             {
               name: "Akouda",
-            },  
+            },
             {
               name: "Kalaâ Kebira",
-            },  
+            },
             {
               name: "Sidi Bou Ali",
             },
@@ -428,9 +445,6 @@ class Dropdown extends React.Component {
             {
               name: "Zaouia - Ksiba - Thrayet",
             },
-            
-
-            
           ],
         },
 
@@ -455,25 +469,25 @@ class Dropdown extends React.Component {
             },
             {
               name: "Bembla",
-            },  
+            },
             {
               name: "Moknine",
-            },  
+            },
             {
               name: "Bekalta",
             },
             {
               name: "Teboulba",
-            }, 
+            },
             {
               name: "Ksar Helal",
-            }, 
+            },
             {
               name: "Ksibet El Mediouni",
-            }, 
+            },
             {
               name: "Sayada-Lamta Bou-Hjar",
-            }, 
+            },
           ],
         },
         {
@@ -497,19 +511,19 @@ class Dropdown extends React.Component {
             },
             {
               name: "El Djem",
-            },  
+            },
             {
               name: "Chebba",
-            },  
+            },
             {
               name: "Melloulech",
             },
             {
               name: "Sidi Alouane",
-            }, 
+            },
             {
               name: "Ksour Essef",
-            }, 
+            },
           ],
         },
 
@@ -534,37 +548,37 @@ class Dropdown extends React.Component {
             },
             {
               name: "Tina",
-            },  
+            },
             {
               name: "Agareb",
-            },  
+            },
             {
               name: "Djebeniana",
             },
             {
               name: "El Amra",
-            }, 
+            },
             {
               name: "El Hencha",
-            }, 
+            },
             {
               name: "Menzel Chaker",
-            }, 
+            },
             {
               name: "Ghraiba",
-            }, 
+            },
             {
               name: "Bir ali Ben Kelifa",
-            }, 
+            },
             {
               name: "Skhira",
-            }, 
+            },
             {
               name: "Mahres",
-            }, 
+            },
             {
               name: "Kerkenah",
-            }, 
+            },
           ],
         },
 
@@ -589,19 +603,19 @@ class Dropdown extends React.Component {
             },
             {
               name: "El Alâa",
-            },  
+            },
             {
               name: "Hajeb el Ayoun",
-            },  
+            },
             {
               name: "Nasrallah",
             },
             {
               name: "Echrarda",
-            }, 
+            },
             {
               name: "Echrarda",
-            }, 
+            },
           ],
         },
 
@@ -626,24 +640,22 @@ class Dropdown extends React.Component {
             },
             {
               name: "Djedeliane",
-            },  
+            },
             {
               name: "El Ayoun",
-            },  
+            },
             {
               name: "Thala",
             },
             {
               name: "Hidra",
-            }, 
+            },
             {
               name: "Foussana",
             },
             {
               name: "Majel Bel Abbès",
-            }, 
-              
-            
+            },
           ],
         },
 
@@ -668,24 +680,22 @@ class Dropdown extends React.Component {
             },
             {
               name: "Menzel Bouzaïenne",
-            },  
+            },
             {
               name: "Meknassy",
-            },  
+            },
             {
               name: "Souk Jedid",
             },
             {
               name: "Mezzouna",
-            }, 
+            },
             {
               name: "Regueb",
             },
             {
               name: "Ouled Haffouz",
-            }, 
-              
-            
+            },
           ],
         },
 
@@ -710,16 +720,16 @@ class Dropdown extends React.Component {
             },
             {
               name: "El Hamma",
-            },  
+            },
             {
               name: "Matmata",
-            },  
+            },
             {
               name: "Nouvelle Matmata",
             },
             {
               name: "Mareth",
-            }, 
+            },
           ],
         },
 
@@ -744,10 +754,10 @@ class Dropdown extends React.Component {
             },
             {
               name: "Djerba Midoun",
-            },  
+            },
             {
               name: "Djerba Ajim",
-            },  
+            },
             {
               name: "Sidi Makhloulf",
             },
@@ -810,7 +820,6 @@ class Dropdown extends React.Component {
             {
               name: "Sned",
             },
-
           ],
         },
 
@@ -855,15 +864,9 @@ class Dropdown extends React.Component {
             {
               name: "Faouar",
             },
-
           ],
         },
-
-
-
       ],
-            
-           
     });
   }
 

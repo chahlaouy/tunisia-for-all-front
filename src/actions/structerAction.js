@@ -39,7 +39,7 @@ export const addStructer = (structer) => {
     return axios.post(API_URL + "structers/", structer).then((res) => {
       console.log("response ", res);
       dispatch({ type: ADD_STRUCTER, payload: res.data.result });
-      history.push(`/structers`);
+      history.push(`/gestion-des-structures`);
     });
   };
 };

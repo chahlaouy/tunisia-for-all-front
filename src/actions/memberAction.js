@@ -41,7 +41,7 @@ export const getMembers = () => dispatch => {
                     .then((res) => {
                         console.log("response ", res);
                         dispatch({ type: ADD_MEMBER, payload : res.data.result })
-                        history.push(`/members`)
+                        history.push(`/gestion-des-adherants`)
 
                     });
             }

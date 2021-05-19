@@ -390,7 +390,7 @@ class EditModal extends React.Component {
                   type="submit"
                   className="bg-indigo-600 px-6 py-3 rounded text-white"
                 >
-                  Ajouter
+                  Enregistrer
                 </button>
               </div>
             </form>

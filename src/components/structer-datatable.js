@@ -34,6 +34,7 @@ class StructerDataTable extends React.Component {
       },
       showHide: false,
     };
+
     this.handleSearchForMembers = this.handleSearchForMembers.bind(this);
   }
   componentDidMount() {
@@ -48,9 +49,9 @@ class StructerDataTable extends React.Component {
    
     this.props.deleteStructer(structer);
   }
-  updateStructer = (viewStructerDetails) => {
-    console.log("this.state ", viewStructerDetails);
-    // history.push("/structer/update", { structer: viewStructerDetails });
+  updateStructer = (structer) => {
+    console.log("this.state ", structer);
+    history.push("/structer/update", { structer: structer });
   };
   handleModalShowHide(structer) {
     console.log(structer);
@@ -254,7 +255,7 @@ class StructerDataTable extends React.Component {
 
                 <td className="border-grey-light border">
                   <div className="flex items-center">
-                    <button  onClick={() => this.updateMember(structer)} className="hover:bg-gray-100 p-3 text-red-400 hover:text-red-600 hover:font-medium cursor-pointer focus:outline-none capitalize">
+                    <button  onClick={() => this.updateStructer(structer)} className="hover:bg-gray-100 p-3 text-red-400 hover:text-red-600 hover:font-medium cursor-pointer focus:outline-none capitalize">
                       éditer
                     </button>
 
