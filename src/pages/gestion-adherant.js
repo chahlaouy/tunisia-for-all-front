@@ -26,7 +26,7 @@ class GestionAdherant extends React.Component {
       className = "z-50 fixed top-0 left-0 w-full h-screen";
     }
     return (
-      <div className="px-4 py-4 max-w-7xl mx-auto">
+      <div className="px-4 py-4 max-w-7xl mx-auto"> 
         {/* <FlashC /> */}
         <div className={className}>
           <div className="max-w-4xl mx-auto">

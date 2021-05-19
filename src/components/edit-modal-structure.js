@@ -85,7 +85,7 @@ class  StructerEditModal extends React.Component {
             <div className="py-8">
                 
                 <div className="relative z-40 rounded-lg -mt-2">
-                        <h2 className="text-2xl bg-green-300 text-gray-800 px-4 py-4 rounded-t-lg uppercase"> Ajouter un nouveau Structure</h2>
+                        <h2 className="text-2xl bg-green-300 text-gray-800 px-4 py-4 rounded-t-lg uppercase"> Modifier Structure</h2>
                         <div className="px-4 py-4 text-lg tracking-wider leading-loose">
 
                             <form ref={(el) => this.myFormRef = el} onSubmit={this.handleSubmit}>
@@ -146,7 +146,6 @@ class  StructerEditModal extends React.Component {
                                             <span className="text-red-500">*</span>
                                         </label>
                                         <input
-                                        required
                                         type="date"
                                         className="bg-gray-100 border border-blue-300 py-px px-2 focus:outline-none rounded w-full block"
                                         id="DateCrea"

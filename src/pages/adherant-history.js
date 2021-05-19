@@ -17,7 +17,9 @@ class AdherantHistory extends React.Component {
     handleModalShowHide() {
         this.setState({ showHideModal: !this.state.showHideModal })
     }
-    
+    handleCallback = () => { 
+        this.setState({ showHideModal: !this.state.showHideModal });
+    }
     render() {
         let className = 'hidden z-50 fixed top-0 left-0 w-full h-screen';
         if (this.state.showHideModal) {
@@ -29,7 +31,7 @@ class AdherantHistory extends React.Component {
                 <div className={className}>
                     <div className="max-w-4xl mx-auto">
 
-                        <Modal />
+                        <Modal parentCallback = {this.handleCallback} />
                     </div>
                 </div>
                 <h3 className="text-3xl mb-8">Liste des Adhérants</h3>

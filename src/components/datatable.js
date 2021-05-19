@@ -250,7 +250,7 @@ class DataTable extends React.Component {
                   <strong>#{member.codeMember} </strong>
                 </td>
                 <td className="border-grey-light border hover:bg-gray-100 p-3 overflow-hidden">
-                  {member.firstName}
+                  {member.firstName} 
                 </td>
                 <td className="border-grey-light border hover:bg-gray-100 p-3 overflow-hidden">
                   {member.lastName}

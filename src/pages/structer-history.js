@@ -1,7 +1,7 @@
 import React from 'react';
 import history from "../history";
 import HistoryStructerDataTable from '../components/history-structer-dataTable';
-// import Modal from '../components/modal'
+import StructerModal from '../components/structer-model'
 
 class StructerHistory extends React.Component {
     constructor(props) {
@@ -9,6 +9,9 @@ class StructerHistory extends React.Component {
         this.state = {
             showHideModal : false,
         };
+    }
+    handleCallback = () => { 
+        this.setState({ showHideModal: !this.state.showHideModal });
     }
     historyAD(){
         history.push("/structer/history");
@@ -28,7 +31,7 @@ class StructerHistory extends React.Component {
                 <div className={className}>
                     <div className="max-w-4xl mx-auto">
 
-                        {/* <Modal /> */}
+                        <StructerModal parentCallback = {this.handleCallback} />
                     </div>
                 </div>
                 <h3 className="text-3xl mb-8">Liste des Adhérants</h3>

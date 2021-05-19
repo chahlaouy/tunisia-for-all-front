@@ -50,7 +50,7 @@ export const updateStructer = (structer) => {
     return axios.put(API_URL + "structers/", structer).then((res) => {
       // console.log("response ", res);
 
-      history.push("/structers");
+      history.push("/gestion-des-structures");
     });
   };
 };

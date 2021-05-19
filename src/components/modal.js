@@ -1,7 +1,7 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { addMember } from "../actions/memberAction";
+import { addMember, getMembers } from "../actions/memberAction";
 import Dropdown from "../components/dropdown";
 import history from "../history";
 
@@ -10,6 +10,7 @@ import axios from "axios";
 class Modal extends React.Component {
   constructor(props) {
     super(props);
+    
     this.state = {
       member: {
         gouvernerat: "",
@@ -40,21 +41,24 @@ class Modal extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  //   static propTypes = {
-  //     getMembers: PropTypes.func.isRequired,
-  //     members: PropTypes.object.isRequired,
-  //   }
+    static propTypes = {
+      getMembers: PropTypes.func.isRequired,
+      members: PropTypes.object.isRequired,
+    }
 
   /** callback for passing data from child to parent component it will be passed as aprop */
   handleCallback = (childData) => {
     const { member } = this.state;
+    const { members } = this.props.members;
+    const maxid = members.length;
+    console.log('max :' + maxid)
     const memberDetails = {
       ...member,
-      gouvernerat: childData.gouvernerat.name,
+      gouvernerat: childData.gouvernerat.name, 
       delegation: childData.delegation.name,
       secteur: childData.secteur.name,
       codeStructure: `${childData.gouvernerat.code}${childData.delegation.code}${childData.secteur.code}`,
-      codeMember: `${childData.gouvernerat.code}${childData.delegation.code}${childData.secteur.code}`,
+      codeMember: `${childData.gouvernerat.code}${childData.delegation.code}${childData.secteur.code}00${maxid + 1}`,
     };
     this.setState({ member: memberDetails }, () => {
       console.log(this.state);
@@ -69,6 +73,9 @@ class Modal extends React.Component {
       loaded: 0,
     });
   };
+  componentDidMount() {
+    this.props.getMembers();
+  }
   closeModal = () => {
     this.props.parentCallback("");
   };
@@ -439,10 +446,12 @@ class Modal extends React.Component {
 
 const mapStateToProps = (state) => ({
   member: state.member,
+  members: state.members,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   addMember: (data) => dispatch(addMember(data)),
+  getMembers: () =>dispatch(getMembers()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Modal);
