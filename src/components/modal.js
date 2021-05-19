@@ -354,7 +354,7 @@ class Modal extends React.Component {
                   <input
                     // pattern="\d*"
                     required
-                    type="number"
+                    type="text"
                     className="bg-gray-100 border border-blue-300  py-px px-2 focus:outline-none rounded w-full block"
                     id="telephone"
                     autoComplete="off"

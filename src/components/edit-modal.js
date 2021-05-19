@@ -379,13 +379,7 @@ class EditModal extends React.Component {
                 />
               </div>
               <div className="flex items-center py-8">
-                <button
-                  onClick={this.cancelCourse}
-                  type="reset"
-                  className="bg-red-400 px-6 py-3 rounded text-white mr-8"
-                >
-                  Effacer
-                </button>
+                
                 <button
                   type="submit"
                   className="bg-indigo-600 px-6 py-3 rounded text-white"
