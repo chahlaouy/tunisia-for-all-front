@@ -154,21 +154,7 @@ class  StructerEditModal extends React.Component {
                                         value={this.state.structer.DateCrea}
                                         />
                                     </div>  
-                                    {/* <div className="mb-4 w-64">
-                                        <label htmlFor="secteur" className="block mb-1">
-                                        Secteur
-                                            <span className="text-red-500">*</span>
-                                        </label>
-                                        <input
-                                        required
-                                        type="text"
-                                        className="bg-gray-100 border border-blue-300 py-px px-2 focus:outline-none rounded w-full block"
-                                        id="secteur"
-                                        autoComplete="off"
-                                        onChange={this.handleChangeFor("secteur")}
-                                        value={this.state.member.secteur}
-                                        />
-                                    </div>   */}
+                                    
                                     <div className="mb-4 w-64">
                                         <label htmlFor="MatriFisc" className="block mb-1">
                                         Matricule Fiscale

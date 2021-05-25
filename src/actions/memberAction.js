@@ -3,6 +3,7 @@ import {
   ADD_MEMBER,
   DELETE_MEMBER,
   GET_MEMBER_BY_ID,
+  LOGIN
 } from "../constants/ActionTypes";
 import axios from "axios";
 import history from "../history";
@@ -15,6 +16,17 @@ export const getMemberById = (id) => {
       console.log("response ", res.data);
       dispatch({ type: GET_MEMBER_BY_ID, payload: res.data });
       // history.push(`/members`)
+    });
+  };
+};
+
+export const login = (member) => {
+  console.log("member ", member);
+  return (dispatch) => {
+    return axios.post(API_URL + "members/login", member).then((res) => {
+      console.log("response ", res);
+      dispatch({ type: LOGIN, payload: res.data.result });
+      history.push(`/dashboard`);
     });
   };
 };

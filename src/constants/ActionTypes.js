@@ -11,3 +11,5 @@ export const VIEW_STRUCTER = "VIEW_STRUCTER";
 export const ADD_STRUCTER = "ADD_STRUCTER";
 export const DELETE_STRUCTER = "DELETE_STRUCTER";
 export const UPDATE_STRUCTER = "UPDATE_STRUCTER";
+export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";

@@ -1,4 +1,4 @@
-import {GET_MEMBERS, VIEW_MEMBER, ADD_MEMBER, DELETE_MEMBER, UPDATE_MEMBER, GET_MEMBER_BY_ID} from '../constants/ActionTypes'
+import {GET_MEMBERS, VIEW_MEMBER, ADD_MEMBER, DELETE_MEMBER, UPDATE_MEMBER, GET_MEMBER_BY_ID, LOGIN} from '../constants/ActionTypes'
 const initialState = {
     members : [],
     member : {}
@@ -16,6 +16,14 @@ const memberReducer = (state = initialState, action) => {
             ...state,
             members : action.payload,
             member : {
+                isSingleMemberView : false
+            }
+        }
+        case LOGIN:
+        return {
+            ...state,
+            user : action.payload,
+            user : {
                 isSingleMemberView : false
             }
         }
