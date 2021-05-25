@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 async function loginUser(credentials) {
-  return fetch("http://localhost:8080/login", {
+  return fetch("http://localhost:3001/api/members/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -27,7 +27,7 @@ export default function Login({ setToken }) {
   return (
     <div className="flex items-center justify-center w-full h-screen ng-gray-100">
       <div className="p-8 shadow-2xl bg-white rounded">
-        <h1 className="text-2xl text-gray-800 text-center">Please Log In</h1>
+        <h1 className="text-2xl text-gray-800 text-center">Connexion</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4 w-64">
             <label htmlFor="birthPlace" className="block mb-1">
@@ -45,7 +45,7 @@ export default function Login({ setToken }) {
           </div>
           <div className="mb-4 w-64">
             <label htmlFor="birthPlace" className="block mb-1">
-              Email
+              Mot de Passe
               <span className="text-red-500">*</span>
             </label>
             <input

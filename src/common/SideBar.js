@@ -1,10 +1,13 @@
 import React from 'react';
 import { People, Apps, Card, LogoBuffer, Bulb, Person } from 'react-ionicons'
 import {Link} from 'react-router-dom';
+import useToken from '../useToken';
 
-const SideBar = () => (
+function SideBar(){
 
-    <div className="p-4 w-64 text-sm bg-indigo-500 rounded flex justify-center">
+    const { token } = useToken();
+    return (
+        <div className="p-4 w-64 text-sm bg-indigo-500 rounded flex justify-center">
         <div>
 
             <Link to="/dashboard" className="flex items-center justify-center w-40 h-40 text-center bg-white rounded mb-4 shadow">
@@ -19,32 +22,38 @@ const SideBar = () => (
                     <span className="capitalize">Dashboard</span>
                 </div>
             </Link>
-
-            <Link to="/gestion-des-adherants" className="flex items-center justify-center w-40 h-40 text-center bg-white rounded mb-4 shadow">
+            {
+                !(token.user.type === 'Trésorier(e)' || token.user.type === 'Simple Membre') ? 
                 <div>
-                    <div className="flex items-center justify-center">
-                        <People
-                            color={'#4f46e5'}
-                            height="50px"
-                            width="50px"
-                        />
-                    </div>
-                    <span className="capitalize">Gestion des Adhérents</span>
-                </div>
-            </Link>
 
-            <Link to="/gestion-des-structures" className="flex items-center justify-center w-40 h-40 text-center bg-white rounded mb-4 shadow">
-                <div>
-                    <div className="flex items-center justify-center">
-                        <LogoBuffer
-                            color={'#4f46e5'}
-                            height="50px"
-                            width="50px"
-                        />
-                    </div>
-                    <span className="capitalize">Gestion des Structures</span>
+                    <Link to="/gestion-des-adherants" className="flex items-center justify-center w-40 h-40 text-center bg-white rounded mb-4 shadow">
+                        <div>
+                            <div className="flex items-center justify-center">
+                                <People
+                                    color={'#4f46e5'}
+                                    height="50px"
+                                    width="50px"
+                                />
+                            </div>
+                            <span className="capitalize">Gestion des Adhérents</span>
+                        </div>
+                    </Link>
+
+                    <Link to="/gestion-des-structures" className="flex items-center justify-center w-40 h-40 text-center bg-white rounded mb-4 shadow">
+                        <div>
+                            <div className="flex items-center justify-center">
+                                <LogoBuffer
+                                    color={'#4f46e5'}
+                                    height="50px"
+                                    width="50px"
+                                />
+                            </div>
+                            <span className="capitalize">Gestion des Structures</span>
+                        </div>
+                    </Link>
                 </div>
-            </Link>
+                : ''
+            }
 
             <Link to="/gestion-financieres" className="flex items-center justify-center w-40 h-40 text-center bg-white rounded mb-4 shadow">
                 <div>
@@ -59,7 +68,7 @@ const SideBar = () => (
                 </div>
             </Link>
 
-            <Link to="/gestion-des activites" className="flex items-center justify-center w-40 h-40 text-center bg-white rounded mb-4 shadow">
+            {/* <Link to="/gestion-des activites" className="flex items-center justify-center w-40 h-40 text-center bg-white rounded mb-4 shadow">
                 <div>
                     <div className="flex items-center justify-center">
                         <Bulb
@@ -70,7 +79,7 @@ const SideBar = () => (
                     </div>
                     <span className="capitalize">Gestion des Activités</span>
                 </div>
-            </Link>
+            </Link> */}
             <Link to="/profile" className="flex items-center justify-center w-40 h-40 text-center bg-white rounded mb-4 shadow">
                 <div>
                     <div className="flex items-center justify-center">
@@ -88,6 +97,8 @@ const SideBar = () => (
             
         </div>
     </div>
-);
+    )
+}
+
 
 export default SideBar;

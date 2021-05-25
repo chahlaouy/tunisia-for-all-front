@@ -244,7 +244,7 @@ class Modal extends React.Component {
                   <label htmlFor="type" className="block mb-1">
                     Type Adhérent
                     <span className="text-red-500">*</span>
-                  </label>
+                  </label> 
                   <select
                     required
                     type="text"
@@ -260,7 +260,7 @@ class Modal extends React.Component {
                     <option value="Directeur(rice) Executif">
                       Directeur(rice) Executif(ve){" "}
                     </option>
-                    <option value="sorier(e)">Trésorier(e) </option>
+                    <option value="Trésorier(e)">Trésorier(e) </option>
                     <option value="Simple Membre">Simple Membre </option>
                   </select>
                 </div>
